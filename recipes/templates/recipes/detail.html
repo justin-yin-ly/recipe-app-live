@@ -1,0 +1,38 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+
+<!DOCTYPE html>
+<html>
+   <title>
+       Recipe Details Page
+   </title>
+
+   <body>
+    <header>
+        <h1>Recipe Details</h1>
+    </header>
+    <div class="button-container">
+        <button type="button" onclick="window.location.href='/list'">Back</button>
+        <button style="margin-left: 10px" type="button" onclick="window.location.href='/logout'">Logout</button>
+    </div>
+    <div class="recipe-details">
+        <div style="margin-right: 40px">
+            <img src="{{object.pic.url}}" width="200" height="200" />
+        </div>
+        <div >
+            <h2>Name: {{object.name}}</h2>
+            <p>
+                <b>Cooking Time: </b> {{object.cooking_time}}  <br>
+            
+                <b>Ingredients: </b> {{object.ingredients}} <br>
+                
+                <b>Difficulty: </b> {{object.calculate_difficulty}} <br>
+            </p>
+        </div>
+    </div>
+   </body>
+</html>

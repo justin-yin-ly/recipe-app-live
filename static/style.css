@@ -1,0 +1,121 @@
+body {
+    background-color: rgb(199, 255, 255);
+    width:100%; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: auto;
+}
+
+header {
+    background-color: rgb(236, 73, 73); 
+    margin-top: -21px; 
+}
+
+h1 {
+    text-align: center; 
+    padding: 20px 0;
+}
+
+button {
+    font-size: 20px;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(236, 73, 73);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+td {
+    border-bottom: 2px solid rgb(236, 73, 73);
+    font-size: 18px;
+}
+
+td+td {
+    width: 500px
+}
+
+table {
+    border: 2px solid rgb(236, 73, 73);
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+a:link, a:visited {
+    color: black
+}
+
+text {
+    visibility: hidden;
+}
+
+form, h3, .chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+form > * {
+    margin-left: 10px;
+}
+
+/*Class specific stylings for each page*/
+.back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;   
+}
+
+.recipes_button {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+.login {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 10%;
+}
+
+.login > input {
+   margin-bottom: 15px;
+}
+
+.recipe-details {
+    width: 40%; 
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.welcome {
+    text-align: center;
+    padding-top: 70px;
+    font-size: 18px;
+    width: 35%;
+    margin: auto
+}
+
+.chart > img {
+    padding: 8px;
+    border: 2px solid rgb(236, 73, 73);
+}

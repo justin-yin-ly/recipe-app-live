@@ -1,0 +1,49 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+
+<!DOCTYPE html>
+<html>
+   <title>
+       Full Recipes List
+   </title>
+   <body>
+        <header>
+            <h1 style="text-align: center;">Recipes In Database</h1>
+        </header>
+        <div class="back-button">
+            <button type="button" onclick="window.location.href='/'">Back To Welcome</button>
+            <button style="margin-left: 10px" type="button" onclick="window.location.href='/logout'">Logout</button>
+        </div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" >Search</button>
+        </form>
+
+   </body>
+
+   <table class="recipe-list" cellpadding="5" cellspacing = "5">    {% comment%} start of table  {% endcomment%}
+    {% if recipes %}
+        {% for object in recipes %} {% comment%} now go through the list element-by-element  {% endcomment%}
+        <tr>
+            <td><img src="{{object.pic.url}}" width="150" height="150" /></td>   {% comment%} display recipe pic  {% endcomment%}
+            <td><a href="{{object.get_absolute_url}}"><b>{{object.name}}</b></a>    {% comment%} recipe name clickable link {% endcomment%}
+            <br>Cooking Time: {{object.cooking_time}}
+            <br>Difficulty: {{object.calculate_difficulty}}
+            </td> 
+        </tr>
+        {% endfor %}
+        <div class="chart">
+            {% if chart %}
+                <img src="data:image/png;base64, {{chart|safe}}">
+            {% endif %}
+        </div>
+    {% else %}
+        <h3>Couldn't find any recipes with that filter.</h3>
+    {% endif %}
+ </table>
+</html>

@@ -1,0 +1,26 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+
+<!DOCTYPE html>
+<html>
+   <title>
+       Recipe App - Home
+   </title>
+
+   <body>
+        <header>
+            <h1>Welcome to the Recipe App!</h1>
+        </header>
+        <p class="welcome">
+            This is a recipe app that lets you view, add, edit, and delete recipes. 
+            To get started using this app, simply click the button below, which will take you to the full list of recipes.
+        </p>
+        <div class="recipes_button">
+            <button type="button" onclick="window.location.href='/list'">To the recipes!</button>
+        </div>
+   </body>
+</html>
