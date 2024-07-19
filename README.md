@@ -1,1 +1,2 @@
-# recipe-app-live
+# Django-based Recipe App
+This project focuses on making use of Django to create a recipe app that allows users to create recipes and store them. Additional functionality includes viewing all recipes, editing existing recipes, searching for specific recipes, and deleting existing recipes. Django serves as the database for storing all this information while also making development easy with its powerful tools and frameworks, allowing for control of both the frontend and backend.
