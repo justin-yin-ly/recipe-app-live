@@ -128,7 +128,7 @@ STATICFILES_DIRS=[
 ]
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Link the media folder for uploading and displaying images
 MEDIA_URL = '/media/'
